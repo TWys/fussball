@@ -16,14 +16,11 @@ function generate() {
    
    teams = shuffle(avilablePlayers); // mieszanie tablicy
    
-   var j = 1;
    for (i=0; i<teams.length; i++) {
-      console.log(i % 2);
       if (i % 2 == 0) {
-         results = results + '<b>Drużyna ' + j.toString() + ':</b> ';
-         j++;
+        results = results + '<b>Drużyna ' + ((i/2)+1).toString() + ':</b> ';
+		results = results  + teams[i];
       }
-      if (i % 2 == 0) results = results  + teams[i];
       else if (i % 2 == 1) results = results  + ', ' + teams[i] + '<br><br>';
    }
    

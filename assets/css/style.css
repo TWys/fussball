@@ -33,8 +33,10 @@ body {
     color: antiquewhite;
 	background-color: #26282E;
 	border: solid 3px white;
-	margin: 10px 0; 
+	margin: 10px 0;
+	padding: 7px;
 	cursor: pointer;
+	border-radius: 10px 25px;
 }
 
 span {

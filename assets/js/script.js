@@ -15,6 +15,7 @@ function generate() {
    }
    
    teams = shuffle(avilablePlayers); // mieszanie tablicy
+   teams = shuffle(avilablePlayers);
    
    for (i=0; i<teams.length; i++) {
       if (i % 2 == 0) {

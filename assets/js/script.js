@@ -14,8 +14,7 @@ function generate() {
     } 
    }
    
-   teams = shuffle(avilablePlayers); // mieszanie tablicy
-   teams = shuffle(avilablePlayers);
+   teams = shuffle(avilablePlayers, (Math.floor(Math.random() * 10))); // mieszanie tablicy
    
    for (i=0; i<teams.length; i++) {
       if (i % 2 == 0) {
@@ -28,13 +27,15 @@ function generate() {
    document.getElementById('teams').innerHTML = results;
 }
    
-function shuffle (arr) {
+function shuffle (arr, repeats) {
     var j, x, index;
-    for (index = arr.length - 1; index > 0; index--) {
-        j = Math.floor(Math.random() * (index + 1));
-        x = arr[index];
-        arr[index] = arr[j];
-        arr[j] = x;
+    for (q = 0; q < repeats; q++) {
+      for (index = arr.length - 1; index > 0; index--) {
+         j = Math.floor(Math.random() * (index + 1));
+         x = arr[index];
+         arr[index] = arr[j];
+         arr[j] = x;
+     }
     }
     return arr;
-}   
+}
